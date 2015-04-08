@@ -24,52 +24,10 @@
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNm-dE-aFE">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                        <subviews>
-                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wiR-tg-VtD" userLabel="View - Content Reference Frame">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1y-2N-6w2">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="A1y-2N-6w2" secondAttribute="trailing" id="1aN-EC-foB"/>
-                                            <constraint firstItem="wiR-tg-VtD" firstAttribute="top" secondItem="pNm-dE-aFE" secondAttribute="top" id="2YX-LW-bmj"/>
-                                            <constraint firstAttribute="trailing" secondItem="wiR-tg-VtD" secondAttribute="trailing" id="8f0-dS-h71"/>
-                                            <constraint firstAttribute="bottom" secondItem="A1y-2N-6w2" secondAttribute="bottom" id="DUS-o5-G99"/>
-                                            <constraint firstItem="A1y-2N-6w2" firstAttribute="bottom" secondItem="wiR-tg-VtD" secondAttribute="bottom" id="Lr4-0M-N5Y"/>
-                                            <constraint firstItem="A1y-2N-6w2" firstAttribute="leading" secondItem="wiR-tg-VtD" secondAttribute="leading" id="MiA-8J-4gm"/>
-                                            <constraint firstItem="wiR-tg-VtD" firstAttribute="trailing" secondItem="A1y-2N-6w2" secondAttribute="trailing" id="PCb-hV-GwI"/>
-                                            <constraint firstAttribute="bottom" secondItem="wiR-tg-VtD" secondAttribute="bottom" id="QVw-1v-OFG"/>
-                                            <constraint firstItem="A1y-2N-6w2" firstAttribute="top" secondItem="pNm-dE-aFE" secondAttribute="top" id="Wce-ka-KAf"/>
-                                            <constraint firstItem="A1y-2N-6w2" firstAttribute="top" secondItem="wiR-tg-VtD" secondAttribute="top" id="Wmu-Qg-fxj"/>
-                                            <constraint firstItem="wiR-tg-VtD" firstAttribute="leading" secondItem="A1y-2N-6w2" secondAttribute="leading" id="Zgl-S7-3yR"/>
-                                            <constraint firstItem="wiR-tg-VtD" firstAttribute="leading" secondItem="pNm-dE-aFE" secondAttribute="leading" id="cAa-6R-XKf"/>
-                                            <constraint firstItem="A1y-2N-6w2" firstAttribute="leading" secondItem="pNm-dE-aFE" secondAttribute="leading" id="fFi-JM-KwU"/>
-                                            <constraint firstItem="A1y-2N-6w2" firstAttribute="trailing" secondItem="wiR-tg-VtD" secondAttribute="trailing" id="gmT-iW-5fb"/>
-                                            <constraint firstItem="wiR-tg-VtD" firstAttribute="top" secondItem="A1y-2N-6w2" secondAttribute="top" id="hEV-7K-yE5"/>
-                                            <constraint firstItem="A1y-2N-6w2" firstAttribute="centerY" secondItem="pNm-dE-aFE" secondAttribute="centerY" id="s6h-oe-vOC"/>
-                                            <constraint firstItem="wiR-tg-VtD" firstAttribute="bottom" secondItem="A1y-2N-6w2" secondAttribute="bottom" id="sB4-6i-Dnl"/>
-                                            <constraint firstItem="A1y-2N-6w2" firstAttribute="centerX" secondItem="pNm-dE-aFE" secondAttribute="centerX" id="sFu-uS-FFY"/>
-                                            <constraint firstItem="wiR-tg-VtD" firstAttribute="leading" secondItem="pNm-dE-aFE" secondAttribute="leading" id="tt8-XF-f1m"/>
-                                            <constraint firstItem="wiR-tg-VtD" firstAttribute="top" secondItem="pNm-dE-aFE" secondAttribute="top" id="zRS-wS-Krr"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="2YX-LW-bmj"/>
-                                                <exclude reference="8f0-dS-h71"/>
-                                                <exclude reference="PCb-hV-GwI"/>
-                                                <exclude reference="QVw-1v-OFG"/>
-                                                <exclude reference="Zgl-S7-3yR"/>
-                                                <exclude reference="cAa-6R-XKf"/>
-                                                <exclude reference="hEV-7K-yE5"/>
-                                                <exclude reference="sB4-6i-Dnl"/>
-                                                <exclude reference="tt8-XF-f1m"/>
-                                                <exclude reference="zRS-wS-Krr"/>
-                                            </mask>
-                                        </variation>
                                     </scrollView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1y-2N-6w2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nI-5s-nso" userLabel="View - Bottom Content">
                                         <rect key="frame" x="0.0" y="619" width="414" height="117"/>
                                         <subviews>
@@ -177,13 +135,17 @@
                                     <constraint firstItem="pNm-dE-aFE" firstAttribute="top" secondItem="bEK-1j-ORs" secondAttribute="top" id="4Dv-il-uFO"/>
                                     <constraint firstItem="pNm-dE-aFE" firstAttribute="leading" secondItem="bEK-1j-ORs" secondAttribute="leading" id="8LU-ma-IsT"/>
                                     <constraint firstAttribute="centerX" secondItem="1nI-5s-nso" secondAttribute="centerX" id="9m0-CI-iBp"/>
+                                    <constraint firstItem="A1y-2N-6w2" firstAttribute="leading" secondItem="bEK-1j-ORs" secondAttribute="leading" id="Opm-nU-QFK"/>
                                     <constraint firstItem="1nI-5s-nso" firstAttribute="leading" secondItem="bEK-1j-ORs" secondAttribute="leading" id="Q6B-Jx-rMU"/>
                                     <constraint firstAttribute="centerX" secondItem="cTE-Vu-1Py" secondAttribute="centerX" id="U0H-YN-wFC"/>
                                     <constraint firstAttribute="bottom" secondItem="pNm-dE-aFE" secondAttribute="bottom" id="Uek-G6-dg6"/>
+                                    <constraint firstItem="A1y-2N-6w2" firstAttribute="top" secondItem="bEK-1j-ORs" secondAttribute="top" id="X5z-GY-vra"/>
                                     <constraint firstAttribute="trailing" secondItem="pNm-dE-aFE" secondAttribute="trailing" id="Yn9-FV-acQ"/>
                                     <constraint firstItem="cTE-Vu-1Py" firstAttribute="top" secondItem="bEK-1j-ORs" secondAttribute="top" constant="52" id="gWL-j3-NQG"/>
                                     <constraint firstAttribute="bottom" secondItem="1nI-5s-nso" secondAttribute="bottom" id="laV-xs-P7h"/>
                                     <constraint firstAttribute="trailing" secondItem="1nI-5s-nso" secondAttribute="trailing" id="mR7-go-Zbt"/>
+                                    <constraint firstAttribute="trailing" secondItem="A1y-2N-6w2" secondAttribute="trailing" id="r5z-Od-skl"/>
+                                    <constraint firstAttribute="bottom" secondItem="A1y-2N-6w2" secondAttribute="bottom" id="wRf-ok-yyu"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -194,19 +156,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="wiR-tg-VtD" secondAttribute="width" id="ETa-tP-yvc"/>
                             <constraint firstItem="bEK-1j-ORs" firstAttribute="top" secondItem="CQK-gQ-tj1" secondAttribute="top" id="N3l-c3-pmo"/>
                             <constraint firstItem="bEK-1j-ORs" firstAttribute="leading" secondItem="CQK-gQ-tj1" secondAttribute="leading" id="Nio-q6-oEf"/>
                             <constraint firstItem="gC1-zh-BRg" firstAttribute="top" secondItem="bEK-1j-ORs" secondAttribute="bottom" id="enU-Wc-MuX"/>
                             <constraint firstAttribute="trailing" secondItem="bEK-1j-ORs" secondAttribute="trailing" id="jYP-Ci-Iay"/>
-                            <constraint firstAttribute="height" secondItem="wiR-tg-VtD" secondAttribute="height" id="omU-kd-r5S"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ETa-tP-yvc"/>
-                                <exclude reference="omU-kd-r5S"/>
-                            </mask>
-                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="ZXP-ny-zuD"/>

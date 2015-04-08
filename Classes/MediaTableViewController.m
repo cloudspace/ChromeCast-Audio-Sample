@@ -27,7 +27,7 @@
   [super viewDidLoad];
 
   // Show stylized application title in the titleview.
-  self.navigationItem.title = @"Cast Music";
+  self.navigationItem.title = @"Cast Audio";
 
   // Asynchronously load the media json.
   AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -48,7 +48,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
-  self.navigationController.navigationBar.topItem.title = @"Cast Music";
+  self.navigationController.navigationBar.topItem.title = @"Cast Audio";
   [[ChromecastDeviceController sharedInstance] manageViewController:self icon:YES toolbar:YES];
 }
 
