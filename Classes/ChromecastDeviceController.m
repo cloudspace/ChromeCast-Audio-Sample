@@ -13,6 +13,9 @@
 #import "DeviceTableViewController.h"
 #import "SimpleImageFetcher.h"
 
+#import "Media.h"
+#import "MediaListModel.h"
+
 NSString * const kCastComponentPosterURL = @"castComponentPosterURL";
 static NSString * const kDeviceTableViewController = @"deviceTableViewController";
 static NSString * const kCastViewController = @"castViewController";
@@ -210,17 +213,15 @@ static NSString * const kCastViewController = @"castViewController";
   [[GCKLogger sharedInstance] setDelegate:self];
 }
 
-- (CastViewController *)castViewControllerForMedia:(GCKMediaInformation *)media
-                                  withStartingTime:(NSTimeInterval)startTime {
+- (CastViewController *)castViewControllerForMedia:(GCKMediaInformation *)media withStartingTime:(NSTimeInterval)startTime selectedMedia:(Media*)selectedMedia mediaList:(MediaListModel*)mediaList {
   CastViewController *vc = [_storyboard instantiateViewControllerWithIdentifier:kCastViewController];
-  [vc setMediaToPlay:media withStartingTime:startTime];
+  [vc setMediaToPlay:media withStartingTime:startTime selectedMedia:selectedMedia mediaList:mediaList];
   return vc;
 }
 
 - (void)displayCurrentlyPlayingMedia {
   if (self.viewController && self.manageToolbar) {
-    CastViewController *vc =
-        [_storyboard instantiateViewControllerWithIdentifier:kCastViewController];
+    CastViewController *vc = [_storyboard instantiateViewControllerWithIdentifier:kCastViewController];
     [vc setMediaToPlay:self.mediaInformation];
     [self.viewController.navigationController pushViewController:vc animated:YES];
   }

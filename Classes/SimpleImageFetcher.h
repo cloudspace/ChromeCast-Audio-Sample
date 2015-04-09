@@ -13,4 +13,6 @@
 + (NSData *)getDataFromImageURL:(NSURL *)urlToFetch;
 + (UIImage *)scaleImage:(UIImage *)image toSize:(CGSize)newSize;
 
++ (void)crossFadeImage:(NSURL*)url inImageView:(UIImageView*)imageView;
+
 @end

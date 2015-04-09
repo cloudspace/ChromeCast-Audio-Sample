@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "CastViewController.h"
 #import "SimpleImageFetcher.h"
+#import "MediaScroller.h"
+
+#import "GCKMediaInformation+LocalMedia.h"
 
 @interface CastViewController () {
   NSTimeInterval _mediaStartTime;
@@ -19,10 +22,16 @@
   __weak ChromecastDeviceController* _chromecastController;
 }
 
-@property IBOutlet UIImageView* thumbnailImage;
-@property IBOutlet UILabel* castingToLabel;
+@property (strong, nonatomic, readwrite) GCKMediaInformation* mediaToPlay;
+
+@property (strong, nonatomic) IBOutlet MediaScroller *mediaScroller;
+@property (strong, nonatomic) IBOutlet UIImageView* thumbnailImage;
+@property (strong, nonatomic) IBOutlet UILabel* castingToLabel;
 @property (weak, nonatomic) IBOutlet UILabel* mediaTitleLabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView* castActivityIndicator;
+
+@property (strong, nonatomic) Media* media;
+@property (strong, nonatomic) MediaListModel* mediaList;
 
 @property (weak, nonatomic) NSTimer* updateStreamTimer;
 @property (weak, nonatomic) NSTimer* fadeVolumeControlTimer;
@@ -68,20 +77,20 @@
               forControlEvents:UIControlEventValueChanged];
 
   _isManualVolumeChange = NO;
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(receivedVolumeChangedNotification:)
-                                               name:@"Volume changed"
-                                             object:_chromecastController];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivedVolumeChangedNotification:) name:@"Volume changed" object:_chromecastController];
 
-  UIButton *transparencyButton = [[UIButton alloc] initWithFrame:self.view.bounds];
-  transparencyButton.autoresizingMask =
-      (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-  transparencyButton.backgroundColor = [UIColor clearColor];
-  [self.view insertSubview:transparencyButton aboveSubview:self.thumbnailImage];
-  [transparencyButton addTarget:self
-                         action:@selector(showVolumeSlider:)
-               forControlEvents:UIControlEventTouchUpInside];
   [self initControls];
+  
+  __weak CastViewController* weakSelf = self;
+  [self.mediaScroller setDidScrollToMediaBlock:^(Media * selectedMedia) {
+    
+    CastViewController* strongSelf = weakSelf;
+    GCKMediaInformation *gckMedia = [GCKMediaInformation mediaInformationFromLocalMedia:selectedMedia];
+    [strongSelf setMediaToPlay:gckMedia selectedMedia:selectedMedia mediaList:strongSelf.mediaList];
+    [strongSelf resetInterfaceElements];
+    [strongSelf mediaNowPlaying];
+    [strongSelf configureView];
+  }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -172,14 +181,16 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setMediaToPlay:(GCKMediaInformation *)newDetailItem {
-  [self setMediaToPlay:newDetailItem withStartingTime:0];
+- (void)setMediaToPlay:(GCKMediaInformation *)newDetailItem selectedMedia:(Media*)media mediaList:(MediaListModel*)mediaList {
+  [self setMediaToPlay:newDetailItem withStartingTime:0 selectedMedia:media mediaList:mediaList];
 }
 
-- (void)setMediaToPlay:(GCKMediaInformation *)newMedia withStartingTime:(NSTimeInterval)startTime {
+- (void)setMediaToPlay:(GCKMediaInformation *)newMedia withStartingTime:(NSTimeInterval)startTime selectedMedia:(Media*)media mediaList:(MediaListModel*)mediaList {
   _mediaStartTime = startTime;
   if (_mediaToPlay != newMedia) {
     _mediaToPlay = newMedia;
+    self.media = media;
+    self.mediaList = mediaList;
   }
 }
 
@@ -296,21 +307,8 @@
     self.mediaTitleLabel.text = title;
 
     NSLog(@"Casting movie %@ at starting time %f", url, _mediaStartTime);
-
-    //Loading thumbnail async
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-      NSString *posterURL = [_mediaToPlay.metadata stringForKey:kCastComponentPosterURL];
-      if (posterURL) {
-        UIImage* image = [UIImage
-            imageWithData:[SimpleImageFetcher getDataFromImageURL:[NSURL URLWithString:posterURL]]];
-
-        dispatch_async(dispatch_get_main_queue(), ^{
-          NSLog(@"Loaded thumbnail image");
-          self.thumbnailImage.image = image;
-          [self.view setNeedsLayout];
-        });
-      }
-    });
+    
+    [self.mediaScroller loadMediaList:self.mediaList withSelectedMedia:self.media];
 
     NSString *cur = [_chromecastController.mediaInformation.metadata
                         stringForKey:kGCKMetadataKeyTitle];

@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class Media;
+@class MediaListModel;
 
 @interface MediaScroller : UIScrollView
+
+- (void)loadMediaList:(MediaListModel*)mediaList withSelectedMedia:(Media*)selectedMedia;
 
 @property (nonatomic, copy) void (^didScrollToMediaBlock) (Media* selectedMedia);
 

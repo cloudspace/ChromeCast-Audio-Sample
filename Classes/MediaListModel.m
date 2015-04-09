@@ -7,10 +7,9 @@
 //
 
 #import "MediaListModel.h"
+#import "SimpleImageFetcher.h"
 
 @interface MediaListModel ()
-
-@property (strong, nonatomic) NSArray* mediaFiles;
 
 @end
 
@@ -65,6 +64,28 @@
     }
   }
   return -1;
+}
+
+- (NSArray*)toUIImageViews {
+  NSMutableArray* newImages = [[NSMutableArray alloc] initWithCapacity:_mediaFiles.count];
+  for (Media* eachMedia in _mediaFiles)
+  {
+    UIImageView* imageView = [self imageViewWithMedia:eachMedia];
+    [imageView setBackgroundColor:[UIColor clearColor]];
+    [imageView setClipsToBounds:true];
+    [imageView setContentMode:UIViewContentModeScaleAspectFill];
+    [newImages addObject:imageView];
+  }
+  
+  return [NSArray arrayWithArray:newImages];
+}
+
+- (UIImageView*)imageViewWithMedia:(Media*)media {
+  UIImageView* imageView = [UIImageView new];
+  
+  [SimpleImageFetcher crossFadeImage:media.posterURL inImageView:imageView];
+  
+  return imageView;
 }
 
 @end

@@ -9,6 +9,9 @@
 #import <GoogleCast/GoogleCast.h>
 #import <Foundation/Foundation.h>
 
+@class Media;
+@class MediaListModel;
+
 extern NSString * const kCastComponentPosterURL;
 
 @protocol ChromecastControllerDelegate<NSObject>
@@ -67,7 +70,7 @@ extern NSString * const kCastComponentPosterURL;
 
 - (void)enableLogging;
 
-- (UIViewController *)castViewControllerForMedia:(GCKMediaInformation *)media withStartingTime:(NSTimeInterval)startTime;
+- (UIViewController *)castViewControllerForMedia:(GCKMediaInformation *)media withStartingTime:(NSTimeInterval)startTime selectedMedia:(Media*)selectedMedia mediaList:(MediaListModel*)mediaList;
 - (void)displayCurrentlyPlayingMedia;
 
 @end

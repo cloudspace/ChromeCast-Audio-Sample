@@ -87,4 +87,29 @@
   return hash;
 }
 
++ (void)crossFadeImage:(NSURL*)url inImageView:(UIImageView*)imageView {
+  imageView.image = nil;
+  
+  if (url == nil)
+    return;
+  
+  if (imageView == nil)
+    return;
+  
+  __weak UIImageView* weakImageView = imageView;
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    UIImage *image = [UIImage imageWithData:[SimpleImageFetcher getDataFromImageURL:url]];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+      UIImageView* strongImageView = weakImageView;
+      [UIView transitionWithView:strongImageView
+                        duration:0.2f
+                         options:UIViewAnimationOptionTransitionCrossDissolve
+                      animations:^{
+                        strongImageView.image = image;
+                      } completion:NULL];
+    });
+  });
+}
+
 @end

@@ -11,11 +11,14 @@
 
 @interface MediaListModel : NSObject
 
+@property (strong, nonatomic) NSArray* mediaFiles;
 @property (nonatomic, strong) NSString* mediaTitle;
 @property (nonatomic, readonly) int numberOfMediaLoaded;
 
 - (void)loadMedia:(void (^)(void))callbackBlock;
 - (Media *)mediaAtIndex:(int)index;
 - (int)indexOfMediaByTitle:(NSString *)title;
+
+- (NSArray*)toUIImageViews;
 
 @end

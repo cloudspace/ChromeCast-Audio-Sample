@@ -117,7 +117,7 @@
   }
   ChromecastDeviceController *controller = [ChromecastDeviceController sharedInstance];
   GCKMediaInformation *media = [GCKMediaInformation mediaInformationFromLocalMedia:mediaToPlay];
-  UIViewController *cvc = [controller castViewControllerForMedia:media withStartingTime:from];
+  UIViewController *cvc = [controller castViewControllerForMedia:media withStartingTime:from selectedMedia:mediaToPlay mediaList:self.mediaList];
   [self.navigationController pushViewController:cvc animated:YES];
 }
 

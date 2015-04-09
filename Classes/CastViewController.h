@@ -11,14 +11,13 @@
 
 @interface CastViewController : UIViewController<ChromecastControllerDelegate>
 
-@property (strong, nonatomic) GCKMediaInformation* mediaToPlay;
+@property (strong, nonatomic, readonly) GCKMediaInformation* mediaToPlay;
 
 @property (strong, nonatomic) IBOutlet UISlider *volumeSlider;
 @property (strong, nonatomic) IBOutlet UIView *volumeControls;
 @property (weak,   nonatomic) IBOutlet UILabel *volumeControlLabel;
 
-
-- (void)setMediaToPlay:(GCKMediaInformation *)newMedia withStartingTime:(NSTimeInterval)startTime;
+- (void)setMediaToPlay:(GCKMediaInformation *)newMedia withStartingTime:(NSTimeInterval)startTime selectedMedia:(Media*)media mediaList:(MediaListModel*)mediaList;
 
 - (IBAction)showVolumeSlider:(id)sender;
 

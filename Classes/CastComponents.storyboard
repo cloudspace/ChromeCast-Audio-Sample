@@ -22,12 +22,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEK-1j-ORs" userLabel="View - Content">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNm-dE-aFE">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pNm-dE-aFE" customClass="MediaScroller">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     </scrollView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A1y-2N-6w2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                    </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nI-5s-nso" userLabel="View - Bottom Content">
                                         <rect key="frame" x="0.0" y="619" width="414" height="117"/>
                                         <subviews>
@@ -135,17 +132,13 @@
                                     <constraint firstItem="pNm-dE-aFE" firstAttribute="top" secondItem="bEK-1j-ORs" secondAttribute="top" id="4Dv-il-uFO"/>
                                     <constraint firstItem="pNm-dE-aFE" firstAttribute="leading" secondItem="bEK-1j-ORs" secondAttribute="leading" id="8LU-ma-IsT"/>
                                     <constraint firstAttribute="centerX" secondItem="1nI-5s-nso" secondAttribute="centerX" id="9m0-CI-iBp"/>
-                                    <constraint firstItem="A1y-2N-6w2" firstAttribute="leading" secondItem="bEK-1j-ORs" secondAttribute="leading" id="Opm-nU-QFK"/>
                                     <constraint firstItem="1nI-5s-nso" firstAttribute="leading" secondItem="bEK-1j-ORs" secondAttribute="leading" id="Q6B-Jx-rMU"/>
                                     <constraint firstAttribute="centerX" secondItem="cTE-Vu-1Py" secondAttribute="centerX" id="U0H-YN-wFC"/>
                                     <constraint firstAttribute="bottom" secondItem="pNm-dE-aFE" secondAttribute="bottom" id="Uek-G6-dg6"/>
-                                    <constraint firstItem="A1y-2N-6w2" firstAttribute="top" secondItem="bEK-1j-ORs" secondAttribute="top" id="X5z-GY-vra"/>
                                     <constraint firstAttribute="trailing" secondItem="pNm-dE-aFE" secondAttribute="trailing" id="Yn9-FV-acQ"/>
                                     <constraint firstItem="cTE-Vu-1Py" firstAttribute="top" secondItem="bEK-1j-ORs" secondAttribute="top" constant="52" id="gWL-j3-NQG"/>
                                     <constraint firstAttribute="bottom" secondItem="1nI-5s-nso" secondAttribute="bottom" id="laV-xs-P7h"/>
                                     <constraint firstAttribute="trailing" secondItem="1nI-5s-nso" secondAttribute="trailing" id="mR7-go-Zbt"/>
-                                    <constraint firstAttribute="trailing" secondItem="A1y-2N-6w2" secondAttribute="trailing" id="r5z-Od-skl"/>
-                                    <constraint firstAttribute="bottom" secondItem="A1y-2N-6w2" secondAttribute="bottom" id="wRf-ok-yyu"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -169,8 +162,8 @@
                     <connections>
                         <outlet property="castActivityIndicator" destination="I9z-7Q-RkO" id="gF6-zD-UiY"/>
                         <outlet property="castingToLabel" destination="fEv-89-Yk2" id="y93-9Q-hZb"/>
+                        <outlet property="mediaScroller" destination="pNm-dE-aFE" id="FPe-AJ-LZo"/>
                         <outlet property="mediaTitleLabel" destination="7DF-67-E6c" id="YkG-wi-kPv"/>
-                        <outlet property="thumbnailImage" destination="A1y-2N-6w2" id="f7y-WW-2vh"/>
                         <outlet property="volumeControlLabel" destination="fR3-5N-Gmj" id="e0g-4L-TYW"/>
                         <outlet property="volumeControls" destination="cTE-Vu-1Py" id="kdo-Gq-ffP"/>
                         <outlet property="volumeSlider" destination="sZB-Tm-QVp" id="lEx-QG-VPB"/>
