@@ -18,7 +18,7 @@
 {
 }
 
-- (void)testAlertShownWhenThereAreNoChromeDevices
+- (void)testNotConnected_TapOnMediaInTable
 {
   NSIndexPath* index = [NSIndexPath indexPathForRow:0 inSection:0];
   [tester waitForCellAtIndexPath:index inTableViewWithAccessibilityIdentifier:@"Table View - Music"];
