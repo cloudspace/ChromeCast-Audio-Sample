@@ -36,6 +36,7 @@
 		CCE5BD45196F038400016BAB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE5BD44196F038400016BAB /* CoreText.framework */; };
 		CCE5BD48196F0AC000016BAB /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE5BD46196F03BB00016BAB /* GoogleCast.framework */; };
 		DF2C8F5D1AD58A6D00561DDD /* MediaScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2C8F5C1AD58A6D00561DDD /* MediaScroller.m */; };
+		DFD2CCF21AD81A5200D2EA6D /* Cast_Audio_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD2CCF11AD81A5200D2EA6D /* Cast_Audio_Tests.m */; };
 		EF60AA281A9D28A40036D4FA /* CastIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EF60AA271A9D28A40036D4FA /* CastIconButton.m */; };
 		EF6E4DE01AB25883006A5ACC /* CastFrameworkAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6E4DDF1AB25883006A5ACC /* CastFrameworkAssets.xcassets */; };
 		EF775C5E1A49FE9E00995266 /* thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = EF775C5B1A49FE9E00995266 /* thumb.png */; };
@@ -48,6 +49,16 @@
 		EFD8A0F31AAE8EE3005808B2 /* CastMiniController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8A0F21AAE8EE3005808B2 /* CastMiniController.m */; };
 		EFE3184819C7D97B00C053EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE3184719C7D97B00C053EE /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFD2CCF31AD81A5200D2EA6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 284CBD7A182ADC2D007F65F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 284CBD81182ADC2D007F65F9;
+			remoteInfo = "Cast Audio";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		124377CE187CC2B500ADF736 /* DeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewController.h; sourceTree = "<group>"; };
@@ -92,6 +103,9 @@
 		CCE5BD46196F03BB00016BAB /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleCast.framework; sourceTree = "<group>"; };
 		DF2C8F5B1AD58A6D00561DDD /* MediaScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaScroller.h; sourceTree = "<group>"; };
 		DF2C8F5C1AD58A6D00561DDD /* MediaScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaScroller.m; sourceTree = "<group>"; };
+		DFD2CCED1AD81A5200D2EA6D /* Cast Audio Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cast Audio Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFD2CCF01AD81A5200D2EA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD2CCF11AD81A5200D2EA6D /* Cast_Audio_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cast_Audio_Tests.m; sourceTree = "<group>"; };
 		EF60AA261A9D28A40036D4FA /* CastIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastIconButton.h; sourceTree = "<group>"; };
 		EF60AA271A9D28A40036D4FA /* CastIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastIconButton.m; sourceTree = "<group>"; };
 		EF6E4DDF1AB25883006A5ACC /* CastFrameworkAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CastFrameworkAssets.xcassets; path = ../CastFrameworkAssets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +139,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFD2CCEA1AD81A5200D2EA6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -133,6 +154,7 @@
 			children = (
 				284CC025182B0F9B007F65F9 /* Images */,
 				284CBD8B182ADC2D007F65F9 /* Classes */,
+				DFD2CCEE1AD81A5200D2EA6D /* Cast Audio Tests */,
 				284CBD84182ADC2D007F65F9 /* Frameworks */,
 				284CBD83182ADC2D007F65F9 /* Products */,
 			);
@@ -142,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				284CBD82182ADC2D007F65F9 /* Cast Audio.app */,
+				DFD2CCED1AD81A5200D2EA6D /* Cast Audio Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +250,23 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		DFD2CCEE1AD81A5200D2EA6D /* Cast Audio Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DFD2CCF11AD81A5200D2EA6D /* Cast_Audio_Tests.m */,
+				DFD2CCEF1AD81A5200D2EA6D /* Supporting Files */,
+			);
+			path = "Cast Audio Tests";
+			sourceTree = "<group>";
+		};
+		DFD2CCEF1AD81A5200D2EA6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFD2CCF01AD81A5200D2EA6D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EF60AA251A9D27390036D4FA /* CastComponents */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +307,24 @@
 			productReference = 284CBD82182ADC2D007F65F9 /* Cast Audio.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DFD2CCEC1AD81A5200D2EA6D /* Cast Audio Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFD2CCF71AD81A5200D2EA6D /* Build configuration list for PBXNativeTarget "Cast Audio Tests" */;
+			buildPhases = (
+				DFD2CCE91AD81A5200D2EA6D /* Sources */,
+				DFD2CCEA1AD81A5200D2EA6D /* Frameworks */,
+				DFD2CCEB1AD81A5200D2EA6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFD2CCF41AD81A5200D2EA6D /* PBXTargetDependency */,
+			);
+			name = "Cast Audio Tests";
+			productName = "Cast Audio Tests";
+			productReference = DFD2CCED1AD81A5200D2EA6D /* Cast Audio Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,7 +335,11 @@
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					284CBD81182ADC2D007F65F9 = {
-						DevelopmentTeam = F438GJLHK7;
+						DevelopmentTeam = 34V4E5MT6Z;
+					};
+					DFD2CCEC1AD81A5200D2EA6D = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 284CBD81182ADC2D007F65F9;
 					};
 				};
 			};
@@ -295,6 +357,7 @@
 			projectRoot = "";
 			targets = (
 				284CBD81182ADC2D007F65F9 /* Cast Audio */,
+				DFD2CCEC1AD81A5200D2EA6D /* Cast Audio Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -325,6 +388,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFD2CCEB1AD81A5200D2EA6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -349,7 +419,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFD2CCE91AD81A5200D2EA6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFD2CCF21AD81A5200D2EA6D /* Cast_Audio_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFD2CCF41AD81A5200D2EA6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 284CBD81182ADC2D007F65F9 /* Cast Audio */;
+			targetProxy = DFD2CCF31AD81A5200D2EA6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		284CBD8E182ADC2D007F65F9 /* InfoPlist.strings */ = {
@@ -381,6 +467,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 11;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -418,8 +505,9 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Unity Marketing, Inc. (34V4E5MT6Z)";
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 11;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -467,8 +555,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Uwithus, Inc. (F438GJLHK7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Uwithus, Inc. (F438GJLHK7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					..,
@@ -482,10 +570,59 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "Cast Audio";
-				PROVISIONING_PROFILE = "c2831507-d5f3-414e-acad-cd7a50aa15e9";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DFD2CCF51AD81A5200D2EA6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Cast Audio Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cast Audio.app/Cast Audio";
+			};
+			name = Debug;
+		};
+		DFD2CCF61AD81A5200D2EA6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "Cast Audio Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cast Audio.app/Cast Audio";
 			};
 			name = Release;
 		};
@@ -509,6 +646,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DFD2CCF71AD81A5200D2EA6D /* Build configuration list for PBXNativeTarget "Cast Audio Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFD2CCF51AD81A5200D2EA6D /* Debug */,
+				DFD2CCF61AD81A5200D2EA6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
