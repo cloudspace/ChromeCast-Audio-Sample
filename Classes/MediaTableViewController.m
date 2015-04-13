@@ -28,6 +28,7 @@
 
   // Show stylized application title in the titleview.
   self.navigationItem.title = @"Cast Audio";
+  self.tableView.accessibilityIdentifier = @"Table View - Music";
 
   // Asynchronously load the media json.
   AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
