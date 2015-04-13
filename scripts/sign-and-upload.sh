@@ -8,7 +8,7 @@ if [[ "$TRAVIS_BRANCH" != "beta_release" ]]; then
   exit 0
 fi
 
-PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_NAME.mobileprovision"
+PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_NAME"
 OUTPUTDIR="$PWD/build/Release-iphoneos"
 
 xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTPUTDIR/$APP_NAME.ipa" -sign "$CERT_NAME" -embed "$PROVISIONING_PROFILE"

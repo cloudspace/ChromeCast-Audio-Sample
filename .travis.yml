@@ -3,7 +3,7 @@ env:
   global:
   - APP_NAME="Cast Audio"
   - 'CERT_NAME="iPhone Distribution: Unity Marketing, Inc. (34V4E5MT6Z)"'
-  - PROFILE_NAME="appstore_com.cloudspace.castaudio"
+  - PROFILE_NAME="appstore_com.cloudspace.castaudio.mobileprovision"
   - secure: O7SlTcTMFeV4KamM04niZRv5S21LYHkI7NAEEXFdyMlhyMmH45Tp9jqkSIWMjEh70rRV8KY88bSDroY9S9td36eDdPEZ5cEOvO/zK7tvlNfgGKsEB1FbaROXVUWnNGvhoDfVJylOkORmzyjINdTCeLrnGRTRR24gd145g8DEv9g=
   - secure: GjcnruRXe0zV3mq/9FZO+BkW/rvJ7f2MHIdhu3z55fRyA+Vp/hrCTeCQ7GZ58geJgOb79b/yOtCfF2C71W00AC50p6RYNMrLZRiRNXDZqNdNRQKpgkm38PWb+HpM+A5FTkXw8ZPvJTaPa2Fp8gpHKzvdTeajppW8aFJkvwEl1Mo=
   - secure: Z2g4zyTYHRNW0iHl+nFvHGlvc0eRKGCPSHNbbmYKzT0aCWSlkRQ8+Jm1C11DsC0MmJtfD283hSRBGE1eo2zyLuIoltbI+xZPooDrA5vc/+fZ3K//s37eCPMgQXODbKAiy2ra75AcGtl7qW5gHxbjodqOSwC6DelHw/4sQu8O0m0=
