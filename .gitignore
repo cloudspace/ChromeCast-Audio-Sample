@@ -10,7 +10,7 @@ build/
 !default.perspectivev3
 xcuserdata
 *.xccheckout
-profile
+/profile
 *.moved-aside
 DerivedData
 *.hmap
