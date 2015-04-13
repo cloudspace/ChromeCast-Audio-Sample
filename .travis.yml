@@ -9,7 +9,7 @@ env:
   - secure: Z2g4zyTYHRNW0iHl+nFvHGlvc0eRKGCPSHNbbmYKzT0aCWSlkRQ8+Jm1C11DsC0MmJtfD283hSRBGE1eo2zyLuIoltbI+xZPooDrA5vc/+fZ3K//s37eCPMgQXODbKAiy2ra75AcGtl7qW5gHxbjodqOSwC6DelHw/4sQu8O0m0=
   - secure: GwC4COPLYTy08OERl0QVFEwQ/Az9t42q+Dh2dc0v4nc2zYGe1gyLnLpGUvz7P5C3sFza0SO6D1BxVTjAi73MUoGxa9b7A0SRqiDHotkrwBRhm8KGNHNUNhyQ38YaZAoloJZ1rkqktmr6hgDO7n/oWPrRINWBCLc+Kc6ASuMqxdk=
 before_script:
-- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/adhoc_com.cloudspace.castaudio.mobileprovision.enc -d -a -out scripts/profile/adhoc_com.cloudspace.castaudio.mobileprovision
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/appstore_com.cloudspace.castaudio.mobileprovision.enc -d -a -out scripts/profile/appstore_com.cloudspace.castaudio.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/cert/UnityDec2.cer.enc -d -a -out scripts/cert/UnityDec2.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/cert/UnityDec2.p12.enc -d -a -out scripts/cert/UnityDec2.p12
 - "./scripts/add-key.sh"
