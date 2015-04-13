@@ -1,661 +1,1989 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		124377D0187CC2B500ADF736 /* DeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 124377CF187CC2B500ADF736 /* DeviceTableViewController.m */; };
-		12E0CCBD18511D8400447896 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12E0CCBB184FFD9B00447896 /* AVFoundation.framework */; };
-		12E0CCCD18513C9D00447896 /* icon-ios_democast_58.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E0CCC818513C9D00447896 /* icon-ios_democast_58.png */; };
-		12E0CCCE18513C9D00447896 /* icon-ios_democast_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E0CCC918513C9D00447896 /* icon-ios_democast_76.png */; };
-		12E0CCCF18513C9D00447896 /* icon-ios_democast_80.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E0CCCA18513C9D00447896 /* icon-ios_democast_80.png */; };
-		12E0CCD018513C9D00447896 /* icon-ios_democast_120.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E0CCCB18513C9D00447896 /* icon-ios_democast_120.png */; };
-		12E0CCD118513C9D00447896 /* icon-ios_democast_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E0CCCC18513C9D00447896 /* icon-ios_democast_152.png */; };
-		12E0CD1918550A0700447896 /* list_outline_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E0CCF118550A0700447896 /* list_outline_white.png */; };
-		12E0CD1A18550A0700447896 /* list_outline_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E0CCF218550A0700447896 /* list_outline_white@2x.png */; };
-		12E0CD1B18550A0700447896 /* list_outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E0CCF318550A0700447896 /* list_outline.png */; };
-		12E0CD1C18550A0700447896 /* list_outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 12E0CCF418550A0700447896 /* list_outline@2x.png */; };
-		284CBD86182ADC2D007F65F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284CBD85182ADC2D007F65F9 /* Foundation.framework */; };
-		284CBD88182ADC2D007F65F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284CBD87182ADC2D007F65F9 /* CoreGraphics.framework */; };
-		284CBD8A182ADC2D007F65F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284CBD89182ADC2D007F65F9 /* UIKit.framework */; };
-		284CBD90182ADC2D007F65F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 284CBD8E182ADC2D007F65F9 /* InfoPlist.strings */; };
-		284CBD92182ADC2D007F65F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CBD91182ADC2D007F65F9 /* main.m */; };
-		284CBD96182ADC2D007F65F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CBD95182ADC2D007F65F9 /* AppDelegate.m */; };
-		284CBD9F182ADC2D007F65F9 /* MediaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CBD9E182ADC2D007F65F9 /* MediaTableViewController.m */; };
-		284CBDA4182ADC2D007F65F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284CBDA3182ADC2D007F65F9 /* Images.xcassets */; };
-		284CC02B182B0F9B007F65F9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 284CC026182B0F9B007F65F9 /* Default-568h@2x.png */; };
-		284CC032182B1891007F65F9 /* ChromecastDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CC031182B1891007F65F9 /* ChromecastDeviceController.m */; };
-		284CC035182C3396007F65F9 /* CastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CC034182C3396007F65F9 /* CastViewController.m */; };
-		491627AF184FBF9C00351397 /* SimpleImageFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 491627AE184FBF9C00351397 /* SimpleImageFetcher.m */; };
-		496D46FE182DBE9100343F72 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 496D46FD182DBE9100343F72 /* Media.m */; };
-		496D4701182DBE9C00343F72 /* MediaListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 496D4700182DBE9C00343F72 /* MediaListModel.m */; };
-		CCE5BD43196F037300016BAB /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE5BD42196F037300016BAB /* MediaAccessibility.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		CCE5BD45196F038400016BAB /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE5BD44196F038400016BAB /* CoreText.framework */; };
-		CCE5BD48196F0AC000016BAB /* GoogleCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE5BD46196F03BB00016BAB /* GoogleCast.framework */; };
-		DF2C8F5D1AD58A6D00561DDD /* MediaScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2C8F5C1AD58A6D00561DDD /* MediaScroller.m */; };
-		DFD2CCF21AD81A5200D2EA6D /* Cast_Audio_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD2CCF11AD81A5200D2EA6D /* Cast_Audio_Tests.m */; };
-		EF60AA281A9D28A40036D4FA /* CastIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EF60AA271A9D28A40036D4FA /* CastIconButton.m */; };
-		EF6E4DE01AB25883006A5ACC /* CastFrameworkAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6E4DDF1AB25883006A5ACC /* CastFrameworkAssets.xcassets */; };
-		EF775C5E1A49FE9E00995266 /* thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = EF775C5B1A49FE9E00995266 /* thumb.png */; };
-		EF775C5F1A49FE9E00995266 /* thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF775C5C1A49FE9E00995266 /* thumb@2x.png */; };
-		EF775C601A49FE9E00995266 /* thumb@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF775C5D1A49FE9E00995266 /* thumb@3x.png */; };
-		EFD8A0E91AABD052005808B2 /* MediaTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8A0E81AABD052005808B2 /* MediaTrack.m */; };
-		EFD8A0EB1AABD632005808B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD8A0EA1AABD632005808B2 /* Main.storyboard */; };
-		EFD8A0ED1AACFCAF005808B2 /* CastComponents.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD8A0EC1AACFCAF005808B2 /* CastComponents.storyboard */; };
-		EFD8A0F01AAE32AB005808B2 /* GCKMediaInformation+LocalMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8A0EF1AAE32AB005808B2 /* GCKMediaInformation+LocalMedia.m */; };
-		EFD8A0F31AAE8EE3005808B2 /* CastMiniController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD8A0F21AAE8EE3005808B2 /* CastMiniController.m */; };
-		EFE3184819C7D97B00C053EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE3184719C7D97B00C053EE /* SystemConfiguration.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DFD2CCF31AD81A5200D2EA6D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 284CBD7A182ADC2D007F65F9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 284CBD81182ADC2D007F65F9;
-			remoteInfo = "Cast Audio";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		124377CE187CC2B500ADF736 /* DeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceTableViewController.h; sourceTree = "<group>"; };
-		124377CF187CC2B500ADF736 /* DeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTableViewController.m; sourceTree = "<group>"; };
-		12E0CCBB184FFD9B00447896 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		12E0CCC818513C9D00447896 /* icon-ios_democast_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios_democast_58.png"; sourceTree = "<group>"; };
-		12E0CCC918513C9D00447896 /* icon-ios_democast_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios_democast_76.png"; sourceTree = "<group>"; };
-		12E0CCCA18513C9D00447896 /* icon-ios_democast_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios_democast_80.png"; sourceTree = "<group>"; };
-		12E0CCCB18513C9D00447896 /* icon-ios_democast_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios_democast_120.png"; sourceTree = "<group>"; };
-		12E0CCCC18513C9D00447896 /* icon-ios_democast_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-ios_democast_152.png"; sourceTree = "<group>"; };
-		12E0CCF118550A0700447896 /* list_outline_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_outline_white.png; sourceTree = "<group>"; };
-		12E0CCF218550A0700447896 /* list_outline_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list_outline_white@2x.png"; sourceTree = "<group>"; };
-		12E0CCF318550A0700447896 /* list_outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list_outline.png; sourceTree = "<group>"; };
-		12E0CCF418550A0700447896 /* list_outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list_outline@2x.png"; sourceTree = "<group>"; };
-		284CBD82182ADC2D007F65F9 /* Cast Audio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cast Audio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		284CBD85182ADC2D007F65F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		284CBD87182ADC2D007F65F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		284CBD89182ADC2D007F65F9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		284CBD8D182ADC2D007F65F9 /* Cast Audio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Cast Audio-Info.plist"; sourceTree = "<group>"; };
-		284CBD8F182ADC2D007F65F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		284CBD91182ADC2D007F65F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		284CBD93182ADC2D007F65F9 /* Cast Audio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cast Audio-Prefix.pch"; sourceTree = "<group>"; };
-		284CBD94182ADC2D007F65F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		284CBD95182ADC2D007F65F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		284CBD9D182ADC2D007F65F9 /* MediaTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MediaTableViewController.h; sourceTree = "<group>"; };
-		284CBD9E182ADC2D007F65F9 /* MediaTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MediaTableViewController.m; sourceTree = "<group>"; };
-		284CBDA3182ADC2D007F65F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		284CBDAA182ADC2D007F65F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		284CC026182B0F9B007F65F9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		284CC030182B1891007F65F9 /* ChromecastDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ChromecastDeviceController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		284CC031182B1891007F65F9 /* ChromecastDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ChromecastDeviceController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		284CC033182C3396007F65F9 /* CastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CastViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		284CC034182C3396007F65F9 /* CastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CastViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		491627AD184FBF9C00351397 /* SimpleImageFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleImageFetcher.h; sourceTree = "<group>"; };
-		491627AE184FBF9C00351397 /* SimpleImageFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleImageFetcher.m; sourceTree = "<group>"; };
-		496D46FC182DBE9100343F72 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
-		496D46FD182DBE9100343F72 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
-		496D46FF182DBE9C00343F72 /* MediaListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaListModel.h; sourceTree = "<group>"; };
-		496D4700182DBE9C00343F72 /* MediaListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaListModel.m; sourceTree = "<group>"; };
-		CCE5BD42196F037300016BAB /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
-		CCE5BD44196F038400016BAB /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		CCE5BD46196F03BB00016BAB /* GoogleCast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleCast.framework; sourceTree = "<group>"; };
-		DF2C8F5B1AD58A6D00561DDD /* MediaScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaScroller.h; sourceTree = "<group>"; };
-		DF2C8F5C1AD58A6D00561DDD /* MediaScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaScroller.m; sourceTree = "<group>"; };
-		DFD2CCED1AD81A5200D2EA6D /* Cast Audio Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cast Audio Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFD2CCF01AD81A5200D2EA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFD2CCF11AD81A5200D2EA6D /* Cast_Audio_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cast_Audio_Tests.m; sourceTree = "<group>"; };
-		EF60AA261A9D28A40036D4FA /* CastIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastIconButton.h; sourceTree = "<group>"; };
-		EF60AA271A9D28A40036D4FA /* CastIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastIconButton.m; sourceTree = "<group>"; };
-		EF6E4DDF1AB25883006A5ACC /* CastFrameworkAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = CastFrameworkAssets.xcassets; path = ../CastFrameworkAssets.xcassets; sourceTree = "<group>"; };
-		EF775C5B1A49FE9E00995266 /* thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumb.png; sourceTree = "<group>"; };
-		EF775C5C1A49FE9E00995266 /* thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb@2x.png"; sourceTree = "<group>"; };
-		EF775C5D1A49FE9E00995266 /* thumb@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb@3x.png"; sourceTree = "<group>"; };
-		EFD8A0E71AABD052005808B2 /* MediaTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTrack.h; sourceTree = "<group>"; };
-		EFD8A0E81AABD052005808B2 /* MediaTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTrack.m; sourceTree = "<group>"; };
-		EFD8A0EA1AABD632005808B2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		EFD8A0EC1AACFCAF005808B2 /* CastComponents.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CastComponents.storyboard; sourceTree = "<group>"; };
-		EFD8A0EE1AAE32AB005808B2 /* GCKMediaInformation+LocalMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GCKMediaInformation+LocalMedia.h"; sourceTree = "<group>"; };
-		EFD8A0EF1AAE32AB005808B2 /* GCKMediaInformation+LocalMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GCKMediaInformation+LocalMedia.m"; sourceTree = "<group>"; };
-		EFD8A0F11AAE8EE3005808B2 /* CastMiniController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastMiniController.h; sourceTree = "<group>"; };
-		EFD8A0F21AAE8EE3005808B2 /* CastMiniController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastMiniController.m; sourceTree = "<group>"; };
-		EFE3184719C7D97B00C053EE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		284CBD7F182ADC2D007F65F9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFE3184819C7D97B00C053EE /* SystemConfiguration.framework in Frameworks */,
-				CCE5BD45196F038400016BAB /* CoreText.framework in Frameworks */,
-				CCE5BD43196F037300016BAB /* MediaAccessibility.framework in Frameworks */,
-				12E0CCBD18511D8400447896 /* AVFoundation.framework in Frameworks */,
-				284CBD88182ADC2D007F65F9 /* CoreGraphics.framework in Frameworks */,
-				284CBD8A182ADC2D007F65F9 /* UIKit.framework in Frameworks */,
-				284CBD86182ADC2D007F65F9 /* Foundation.framework in Frameworks */,
-				CCE5BD48196F0AC000016BAB /* GoogleCast.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DFD2CCEA1AD81A5200D2EA6D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		284CBD79182ADC2D007F65F9 = {
-			isa = PBXGroup;
-			children = (
-				284CC025182B0F9B007F65F9 /* Images */,
-				284CBD8B182ADC2D007F65F9 /* Classes */,
-				DFD2CCEE1AD81A5200D2EA6D /* Cast Audio Tests */,
-				284CBD84182ADC2D007F65F9 /* Frameworks */,
-				284CBD83182ADC2D007F65F9 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		284CBD83182ADC2D007F65F9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				284CBD82182ADC2D007F65F9 /* Cast Audio.app */,
-				DFD2CCED1AD81A5200D2EA6D /* Cast Audio Tests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		284CBD84182ADC2D007F65F9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EFE3184719C7D97B00C053EE /* SystemConfiguration.framework */,
-				CCE5BD46196F03BB00016BAB /* GoogleCast.framework */,
-				CCE5BD44196F038400016BAB /* CoreText.framework */,
-				CCE5BD42196F037300016BAB /* MediaAccessibility.framework */,
-				12E0CCBB184FFD9B00447896 /* AVFoundation.framework */,
-				284CBD85182ADC2D007F65F9 /* Foundation.framework */,
-				284CBD87182ADC2D007F65F9 /* CoreGraphics.framework */,
-				284CBD89182ADC2D007F65F9 /* UIKit.framework */,
-				284CBDAA182ADC2D007F65F9 /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		284CBD8B182ADC2D007F65F9 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				DF2C8F5A1AD45FEB00561DDD /* Models */,
-				EF60AA251A9D27390036D4FA /* CastComponents */,
-				EFD8A0EA1AABD632005808B2 /* Main.storyboard */,
-				284CBD94182ADC2D007F65F9 /* AppDelegate.h */,
-				284CBD95182ADC2D007F65F9 /* AppDelegate.m */,
-				284CBD9D182ADC2D007F65F9 /* MediaTableViewController.h */,
-				284CBD9E182ADC2D007F65F9 /* MediaTableViewController.m */,
-				491627AD184FBF9C00351397 /* SimpleImageFetcher.h */,
-				491627AE184FBF9C00351397 /* SimpleImageFetcher.m */,
-				EFD8A0EE1AAE32AB005808B2 /* GCKMediaInformation+LocalMedia.h */,
-				EFD8A0EF1AAE32AB005808B2 /* GCKMediaInformation+LocalMedia.m */,
-				284CBDA3182ADC2D007F65F9 /* Images.xcassets */,
-				284CBD8C182ADC2D007F65F9 /* Supporting Files */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		284CBD8C182ADC2D007F65F9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				284CBD8D182ADC2D007F65F9 /* Cast Audio-Info.plist */,
-				284CBD8E182ADC2D007F65F9 /* InfoPlist.strings */,
-				284CBD91182ADC2D007F65F9 /* main.m */,
-				284CBD93182ADC2D007F65F9 /* Cast Audio-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		284CC025182B0F9B007F65F9 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				EF6E4DDF1AB25883006A5ACC /* CastFrameworkAssets.xcassets */,
-				EF775C5B1A49FE9E00995266 /* thumb.png */,
-				EF775C5C1A49FE9E00995266 /* thumb@2x.png */,
-				EF775C5D1A49FE9E00995266 /* thumb@3x.png */,
-				12E0CCF118550A0700447896 /* list_outline_white.png */,
-				12E0CCF218550A0700447896 /* list_outline_white@2x.png */,
-				12E0CCF318550A0700447896 /* list_outline.png */,
-				12E0CCF418550A0700447896 /* list_outline@2x.png */,
-				12E0CCC818513C9D00447896 /* icon-ios_democast_58.png */,
-				12E0CCC918513C9D00447896 /* icon-ios_democast_76.png */,
-				12E0CCCA18513C9D00447896 /* icon-ios_democast_80.png */,
-				12E0CCCB18513C9D00447896 /* icon-ios_democast_120.png */,
-				12E0CCCC18513C9D00447896 /* icon-ios_democast_152.png */,
-				284CC026182B0F9B007F65F9 /* Default-568h@2x.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		DF2C8F5A1AD45FEB00561DDD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				496D46FC182DBE9100343F72 /* Media.h */,
-				496D46FD182DBE9100343F72 /* Media.m */,
-				EFD8A0E71AABD052005808B2 /* MediaTrack.h */,
-				EFD8A0E81AABD052005808B2 /* MediaTrack.m */,
-				496D46FF182DBE9C00343F72 /* MediaListModel.h */,
-				496D4700182DBE9C00343F72 /* MediaListModel.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		DFD2CCEE1AD81A5200D2EA6D /* Cast Audio Tests */ = {
-			isa = PBXGroup;
-			children = (
-				DFD2CCF11AD81A5200D2EA6D /* Cast_Audio_Tests.m */,
-				DFD2CCEF1AD81A5200D2EA6D /* Supporting Files */,
-			);
-			path = "Cast Audio Tests";
-			sourceTree = "<group>";
-		};
-		DFD2CCEF1AD81A5200D2EA6D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				DFD2CCF01AD81A5200D2EA6D /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EF60AA251A9D27390036D4FA /* CastComponents */ = {
-			isa = PBXGroup;
-			children = (
-				124377CE187CC2B500ADF736 /* DeviceTableViewController.h */,
-				124377CF187CC2B500ADF736 /* DeviceTableViewController.m */,
-				284CC030182B1891007F65F9 /* ChromecastDeviceController.h */,
-				284CC031182B1891007F65F9 /* ChromecastDeviceController.m */,
-				EF60AA261A9D28A40036D4FA /* CastIconButton.h */,
-				EF60AA271A9D28A40036D4FA /* CastIconButton.m */,
-				EFD8A0F11AAE8EE3005808B2 /* CastMiniController.h */,
-				EFD8A0F21AAE8EE3005808B2 /* CastMiniController.m */,
-				284CC033182C3396007F65F9 /* CastViewController.h */,
-				284CC034182C3396007F65F9 /* CastViewController.m */,
-				EFD8A0EC1AACFCAF005808B2 /* CastComponents.storyboard */,
-				DF2C8F5B1AD58A6D00561DDD /* MediaScroller.h */,
-				DF2C8F5C1AD58A6D00561DDD /* MediaScroller.m */,
-			);
-			name = CastComponents;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		284CBD81182ADC2D007F65F9 /* Cast Audio */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 284CBDBA182ADC2E007F65F9 /* Build configuration list for PBXNativeTarget "Cast Audio" */;
-			buildPhases = (
-				284CBD7E182ADC2D007F65F9 /* Sources */,
-				284CBD7F182ADC2D007F65F9 /* Frameworks */,
-				284CBD80182ADC2D007F65F9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Cast Audio";
-			productName = Chromecast_iOS;
-			productReference = 284CBD82182ADC2D007F65F9 /* Cast Audio.app */;
-			productType = "com.apple.product-type.application";
-		};
-		DFD2CCEC1AD81A5200D2EA6D /* Cast Audio Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DFD2CCF71AD81A5200D2EA6D /* Build configuration list for PBXNativeTarget "Cast Audio Tests" */;
-			buildPhases = (
-				DFD2CCE91AD81A5200D2EA6D /* Sources */,
-				DFD2CCEA1AD81A5200D2EA6D /* Frameworks */,
-				DFD2CCEB1AD81A5200D2EA6D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DFD2CCF41AD81A5200D2EA6D /* PBXTargetDependency */,
-			);
-			name = "Cast Audio Tests";
-			productName = "Cast Audio Tests";
-			productReference = DFD2CCED1AD81A5200D2EA6D /* Cast Audio Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		284CBD7A182ADC2D007F65F9 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "";
-				TargetAttributes = {
-					284CBD81182ADC2D007F65F9 = {
-						DevelopmentTeam = 34V4E5MT6Z;
-					};
-					DFD2CCEC1AD81A5200D2EA6D = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = 284CBD81182ADC2D007F65F9;
-					};
-				};
-			};
-			buildConfigurationList = 284CBD7D182ADC2D007F65F9 /* Build configuration list for PBXProject "Cast Audio" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 284CBD79182ADC2D007F65F9;
-			productRefGroup = 284CBD83182ADC2D007F65F9 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				284CBD81182ADC2D007F65F9 /* Cast Audio */,
-				DFD2CCEC1AD81A5200D2EA6D /* Cast Audio Tests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		284CBD80182ADC2D007F65F9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF775C601A49FE9E00995266 /* thumb@3x.png in Resources */,
-				12E0CD1C18550A0700447896 /* list_outline@2x.png in Resources */,
-				12E0CD1B18550A0700447896 /* list_outline.png in Resources */,
-				EFD8A0EB1AABD632005808B2 /* Main.storyboard in Resources */,
-				EFD8A0ED1AACFCAF005808B2 /* CastComponents.storyboard in Resources */,
-				EF775C5F1A49FE9E00995266 /* thumb@2x.png in Resources */,
-				284CBDA4182ADC2D007F65F9 /* Images.xcassets in Resources */,
-				12E0CCD118513C9D00447896 /* icon-ios_democast_152.png in Resources */,
-				EF775C5E1A49FE9E00995266 /* thumb.png in Resources */,
-				12E0CCD018513C9D00447896 /* icon-ios_democast_120.png in Resources */,
-				EF6E4DE01AB25883006A5ACC /* CastFrameworkAssets.xcassets in Resources */,
-				12E0CCCD18513C9D00447896 /* icon-ios_democast_58.png in Resources */,
-				284CBD90182ADC2D007F65F9 /* InfoPlist.strings in Resources */,
-				12E0CD1918550A0700447896 /* list_outline_white.png in Resources */,
-				12E0CD1A18550A0700447896 /* list_outline_white@2x.png in Resources */,
-				284CC02B182B0F9B007F65F9 /* Default-568h@2x.png in Resources */,
-				12E0CCCE18513C9D00447896 /* icon-ios_democast_76.png in Resources */,
-				12E0CCCF18513C9D00447896 /* icon-ios_democast_80.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DFD2CCEB1AD81A5200D2EA6D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		284CBD7E182ADC2D007F65F9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				284CBD96182ADC2D007F65F9 /* AppDelegate.m in Sources */,
-				284CC032182B1891007F65F9 /* ChromecastDeviceController.m in Sources */,
-				284CBD9F182ADC2D007F65F9 /* MediaTableViewController.m in Sources */,
-				EF60AA281A9D28A40036D4FA /* CastIconButton.m in Sources */,
-				284CC035182C3396007F65F9 /* CastViewController.m in Sources */,
-				284CBD92182ADC2D007F65F9 /* main.m in Sources */,
-				124377D0187CC2B500ADF736 /* DeviceTableViewController.m in Sources */,
-				EFD8A0F01AAE32AB005808B2 /* GCKMediaInformation+LocalMedia.m in Sources */,
-				491627AF184FBF9C00351397 /* SimpleImageFetcher.m in Sources */,
-				EFD8A0F31AAE8EE3005808B2 /* CastMiniController.m in Sources */,
-				496D46FE182DBE9100343F72 /* Media.m in Sources */,
-				EFD8A0E91AABD052005808B2 /* MediaTrack.m in Sources */,
-				DF2C8F5D1AD58A6D00561DDD /* MediaScroller.m in Sources */,
-				496D4701182DBE9C00343F72 /* MediaListModel.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DFD2CCE91AD81A5200D2EA6D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DFD2CCF21AD81A5200D2EA6D /* Cast_Audio_Tests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		DFD2CCF41AD81A5200D2EA6D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 284CBD81182ADC2D007F65F9 /* Cast Audio */;
-			targetProxy = DFD2CCF31AD81A5200D2EA6D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		284CBD8E182ADC2D007F65F9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				284CBD8F182ADC2D007F65F9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		284CBDB8182ADC2E007F65F9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 11;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		284CBDB9182ADC2E007F65F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Unity Marketing, Inc. (34V4E5MT6Z)";
-				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 11;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		284CBDBB182ADC2E007F65F9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					..,
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Classes/Cast Audio-Prefix.pch";
-				INFOPLIST_FILE = "Classes/Cast Audio-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Cast Audio";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s arm64";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		284CBDBC182ADC2E007F65F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					..,
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Classes/Cast Audio-Prefix.pch";
-				INFOPLIST_FILE = "Classes/Cast Audio-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "Cast Audio";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s arm64";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		DFD2CCF51AD81A5200D2EA6D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Cast Audio Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cast Audio.app/Cast Audio";
-			};
-			name = Debug;
-		};
-		DFD2CCF61AD81A5200D2EA6D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "Cast Audio Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cast Audio.app/Cast Audio";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		284CBD7D182ADC2D007F65F9 /* Build configuration list for PBXProject "Cast Audio" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				284CBDB8182ADC2E007F65F9 /* Debug */,
-				284CBDB9182ADC2E007F65F9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		284CBDBA182ADC2E007F65F9 /* Build configuration list for PBXNativeTarget "Cast Audio" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				284CBDBB182ADC2E007F65F9 /* Debug */,
-				284CBDBC182ADC2E007F65F9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DFD2CCF71AD81A5200D2EA6D /* Build configuration list for PBXNativeTarget "Cast Audio Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DFD2CCF51AD81A5200D2EA6D /* Debug */,
-				DFD2CCF61AD81A5200D2EA6D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 284CBD7A182ADC2D007F65F9 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0605A3C4DAE0D4B5AD561855</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Cast Audio Tests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Cast Audio Tests/Pods-Cast Audio Tests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>06FFE6F5DFEF50FFDBB38A59</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Cast Audio Tests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Cast Audio Tests/Pods-Cast Audio Tests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>07C8179CD11D6AAE0DBE0F23</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>06FFE6F5DFEF50FFDBB38A59</string>
+				<string>0605A3C4DAE0D4B5AD561855</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>124377CE187CC2B500ADF736</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DeviceTableViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>124377CF187CC2B500ADF736</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DeviceTableViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>124377D0187CC2B500ADF736</key>
+		<dict>
+			<key>fileRef</key>
+			<string>124377CF187CC2B500ADF736</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E0CCBB184FFD9B00447896</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AVFoundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AVFoundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>12E0CCBD18511D8400447896</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12E0CCBB184FFD9B00447896</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E0CCC818513C9D00447896</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-ios_democast_58.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12E0CCC918513C9D00447896</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-ios_democast_76.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12E0CCCA18513C9D00447896</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-ios_democast_80.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12E0CCCB18513C9D00447896</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-ios_democast_120.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12E0CCCC18513C9D00447896</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>icon-ios_democast_152.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12E0CCCD18513C9D00447896</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12E0CCC818513C9D00447896</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E0CCCE18513C9D00447896</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12E0CCC918513C9D00447896</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E0CCCF18513C9D00447896</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12E0CCCA18513C9D00447896</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E0CCD018513C9D00447896</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12E0CCCB18513C9D00447896</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E0CCD118513C9D00447896</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12E0CCCC18513C9D00447896</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E0CCF118550A0700447896</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>list_outline_white.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12E0CCF218550A0700447896</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>list_outline_white@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12E0CCF318550A0700447896</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>list_outline.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12E0CCF418550A0700447896</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>list_outline@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>12E0CD1918550A0700447896</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12E0CCF118550A0700447896</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E0CD1A18550A0700447896</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12E0CCF218550A0700447896</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E0CD1B18550A0700447896</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12E0CCF318550A0700447896</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>12E0CD1C18550A0700447896</key>
+		<dict>
+			<key>fileRef</key>
+			<string>12E0CCF418550A0700447896</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CBD79182ADC2D007F65F9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>284CC025182B0F9B007F65F9</string>
+				<string>284CBD8B182ADC2D007F65F9</string>
+				<string>DFD2CCEE1AD81A5200D2EA6D</string>
+				<string>284CBD84182ADC2D007F65F9</string>
+				<string>284CBD83182ADC2D007F65F9</string>
+				<string>07C8179CD11D6AAE0DBE0F23</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD7A182ADC2D007F65F9</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string></string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>284CBD81182ADC2D007F65F9</key>
+					<dict>
+						<key>DevelopmentTeam</key>
+						<string>34V4E5MT6Z</string>
+					</dict>
+					<key>DFD2CCEC1AD81A5200D2EA6D</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.3</string>
+						<key>TestTargetID</key>
+						<string>284CBD81182ADC2D007F65F9</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>284CBD7D182ADC2D007F65F9</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>284CBD79182ADC2D007F65F9</string>
+			<key>productRefGroup</key>
+			<string>284CBD83182ADC2D007F65F9</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>284CBD81182ADC2D007F65F9</string>
+				<string>DFD2CCEC1AD81A5200D2EA6D</string>
+			</array>
+		</dict>
+		<key>284CBD7D182ADC2D007F65F9</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>284CBDB8182ADC2E007F65F9</string>
+				<string>284CBDB9182ADC2E007F65F9</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>284CBD7E182ADC2D007F65F9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>284CBD96182ADC2D007F65F9</string>
+				<string>284CC032182B1891007F65F9</string>
+				<string>284CBD9F182ADC2D007F65F9</string>
+				<string>EF60AA281A9D28A40036D4FA</string>
+				<string>284CC035182C3396007F65F9</string>
+				<string>284CBD92182ADC2D007F65F9</string>
+				<string>124377D0187CC2B500ADF736</string>
+				<string>EFD8A0F01AAE32AB005808B2</string>
+				<string>491627AF184FBF9C00351397</string>
+				<string>EFD8A0F31AAE8EE3005808B2</string>
+				<string>496D46FE182DBE9100343F72</string>
+				<string>EFD8A0E91AABD052005808B2</string>
+				<string>DF2C8F5D1AD58A6D00561DDD</string>
+				<string>496D4701182DBE9C00343F72</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>284CBD7F182ADC2D007F65F9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EFE3184819C7D97B00C053EE</string>
+				<string>CCE5BD45196F038400016BAB</string>
+				<string>CCE5BD43196F037300016BAB</string>
+				<string>12E0CCBD18511D8400447896</string>
+				<string>284CBD88182ADC2D007F65F9</string>
+				<string>284CBD8A182ADC2D007F65F9</string>
+				<string>284CBD86182ADC2D007F65F9</string>
+				<string>CCE5BD48196F0AC000016BAB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>284CBD80182ADC2D007F65F9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>EF775C601A49FE9E00995266</string>
+				<string>12E0CD1C18550A0700447896</string>
+				<string>12E0CD1B18550A0700447896</string>
+				<string>EFD8A0EB1AABD632005808B2</string>
+				<string>EFD8A0ED1AACFCAF005808B2</string>
+				<string>EF775C5F1A49FE9E00995266</string>
+				<string>284CBDA4182ADC2D007F65F9</string>
+				<string>12E0CCD118513C9D00447896</string>
+				<string>EF775C5E1A49FE9E00995266</string>
+				<string>12E0CCD018513C9D00447896</string>
+				<string>EF6E4DE01AB25883006A5ACC</string>
+				<string>12E0CCCD18513C9D00447896</string>
+				<string>284CBD90182ADC2D007F65F9</string>
+				<string>12E0CD1918550A0700447896</string>
+				<string>12E0CD1A18550A0700447896</string>
+				<string>284CC02B182B0F9B007F65F9</string>
+				<string>12E0CCCE18513C9D00447896</string>
+				<string>12E0CCCF18513C9D00447896</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>284CBD81182ADC2D007F65F9</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>284CBDBA182ADC2E007F65F9</string>
+			<key>buildPhases</key>
+			<array>
+				<string>284CBD7E182ADC2D007F65F9</string>
+				<string>284CBD7F182ADC2D007F65F9</string>
+				<string>284CBD80182ADC2D007F65F9</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Cast Audio</string>
+			<key>productName</key>
+			<string>Chromecast_iOS</string>
+			<key>productReference</key>
+			<string>284CBD82182ADC2D007F65F9</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>284CBD82182ADC2D007F65F9</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Cast Audio.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>284CBD83182ADC2D007F65F9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>284CBD82182ADC2D007F65F9</string>
+				<string>DFD2CCED1AD81A5200D2EA6D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD84182ADC2D007F65F9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EFE3184719C7D97B00C053EE</string>
+				<string>CCE5BD46196F03BB00016BAB</string>
+				<string>CCE5BD44196F038400016BAB</string>
+				<string>CCE5BD42196F037300016BAB</string>
+				<string>12E0CCBB184FFD9B00447896</string>
+				<string>284CBD85182ADC2D007F65F9</string>
+				<string>284CBD87182ADC2D007F65F9</string>
+				<string>284CBD89182ADC2D007F65F9</string>
+				<string>284CBDAA182ADC2D007F65F9</string>
+				<string>482F9F8064BDDCA988B39B0F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD85182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>284CBD86182ADC2D007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CBD85182ADC2D007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CBD87182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>284CBD88182ADC2D007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CBD87182ADC2D007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CBD89182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>284CBD8A182ADC2D007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CBD89182ADC2D007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CBD8B182ADC2D007F65F9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DF2C8F5A1AD45FEB00561DDD</string>
+				<string>EF60AA251A9D27390036D4FA</string>
+				<string>EFD8A0EA1AABD632005808B2</string>
+				<string>284CBD94182ADC2D007F65F9</string>
+				<string>284CBD95182ADC2D007F65F9</string>
+				<string>284CBD9D182ADC2D007F65F9</string>
+				<string>284CBD9E182ADC2D007F65F9</string>
+				<string>491627AD184FBF9C00351397</string>
+				<string>491627AE184FBF9C00351397</string>
+				<string>EFD8A0EE1AAE32AB005808B2</string>
+				<string>EFD8A0EF1AAE32AB005808B2</string>
+				<string>284CBDA3182ADC2D007F65F9</string>
+				<string>284CBD8C182ADC2D007F65F9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD8C182ADC2D007F65F9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>284CBD8D182ADC2D007F65F9</string>
+				<string>284CBD8E182ADC2D007F65F9</string>
+				<string>284CBD91182ADC2D007F65F9</string>
+				<string>284CBD93182ADC2D007F65F9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD8D182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Cast Audio-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD8E182ADC2D007F65F9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>284CBD8F182ADC2D007F65F9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD8F182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD90182ADC2D007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CBD8E182ADC2D007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CBD91182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD92182ADC2D007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CBD91182ADC2D007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CBD93182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Cast Audio-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD94182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD95182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD96182ADC2D007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CBD95182ADC2D007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CBD9D182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MediaTableViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD9E182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MediaTableViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBD9F182ADC2D007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CBD9E182ADC2D007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CBDA3182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CBDA4182ADC2D007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CBDA3182ADC2D007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CBDAA182ADC2D007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>284CBDB8182ADC2E007F65F9</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>11</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>284CBDB9182ADC2E007F65F9</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Distribution: Unity Marketing, Inc. (34V4E5MT6Z)</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>11</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>284CBDBA182ADC2E007F65F9</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>284CBDBB182ADC2E007F65F9</string>
+				<string>284CBDBC182ADC2E007F65F9</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>284CBDBB182ADC2E007F65F9</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>..</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Classes/Cast Audio-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Classes/Cast Audio-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>NO</string>
+				<key>OTHER_CFLAGS</key>
+				<string></string>
+				<key>OTHER_LDFLAGS</key>
+				<string>-ObjC</string>
+				<key>PRODUCT_NAME</key>
+				<string>Cast Audio</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALID_ARCHS</key>
+				<string>armv7 armv7s arm64</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>284CBDBC182ADC2E007F65F9</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Distribution</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Distribution</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>..</string>
+					<string>$(PROJECT_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Classes/Cast Audio-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Classes/Cast Audio-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>NO</string>
+				<key>OTHER_CFLAGS</key>
+				<string></string>
+				<key>OTHER_LDFLAGS</key>
+				<string>-ObjC</string>
+				<key>PRODUCT_NAME</key>
+				<string>Cast Audio</string>
+				<key>PROVISIONING_PROFILE</key>
+				<string></string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALID_ARCHS</key>
+				<string>armv7 armv7s arm64</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>284CC025182B0F9B007F65F9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EF6E4DDF1AB25883006A5ACC</string>
+				<string>EF775C5B1A49FE9E00995266</string>
+				<string>EF775C5C1A49FE9E00995266</string>
+				<string>EF775C5D1A49FE9E00995266</string>
+				<string>12E0CCF118550A0700447896</string>
+				<string>12E0CCF218550A0700447896</string>
+				<string>12E0CCF318550A0700447896</string>
+				<string>12E0CCF418550A0700447896</string>
+				<string>12E0CCC818513C9D00447896</string>
+				<string>12E0CCC918513C9D00447896</string>
+				<string>12E0CCCA18513C9D00447896</string>
+				<string>12E0CCCB18513C9D00447896</string>
+				<string>12E0CCCC18513C9D00447896</string>
+				<string>284CC026182B0F9B007F65F9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Images</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CC026182B0F9B007F65F9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default-568h@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>284CC02B182B0F9B007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CC026182B0F9B007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CC030182B1891007F65F9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>lineEnding</key>
+			<string>0</string>
+			<key>path</key>
+			<string>ChromecastDeviceController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.objcpp</string>
+		</dict>
+		<key>284CC031182B1891007F65F9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>lineEnding</key>
+			<string>0</string>
+			<key>path</key>
+			<string>ChromecastDeviceController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.objc</string>
+		</dict>
+		<key>284CC032182B1891007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CC031182B1891007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>284CC033182C3396007F65F9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>lineEnding</key>
+			<string>0</string>
+			<key>path</key>
+			<string>CastViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.objcpp</string>
+		</dict>
+		<key>284CC034182C3396007F65F9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>lineEnding</key>
+			<string>0</string>
+			<key>path</key>
+			<string>CastViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.objc</string>
+		</dict>
+		<key>284CC035182C3396007F65F9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>284CC034182C3396007F65F9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>482F9F8064BDDCA988B39B0F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-Cast Audio Tests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>491627AD184FBF9C00351397</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SimpleImageFetcher.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>491627AE184FBF9C00351397</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SimpleImageFetcher.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>491627AF184FBF9C00351397</key>
+		<dict>
+			<key>fileRef</key>
+			<string>491627AE184FBF9C00351397</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>496D46FC182DBE9100343F72</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Media.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>496D46FD182DBE9100343F72</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Media.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>496D46FE182DBE9100343F72</key>
+		<dict>
+			<key>fileRef</key>
+			<string>496D46FD182DBE9100343F72</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>496D46FF182DBE9C00343F72</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MediaListModel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>496D4700182DBE9C00343F72</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MediaListModel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>496D4701182DBE9C00343F72</key>
+		<dict>
+			<key>fileRef</key>
+			<string>496D4700182DBE9C00343F72</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8268AB1D90CD19FD7F13733B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>CCE5BD42196F037300016BAB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>MediaAccessibility.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/MediaAccessibility.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>CCE5BD43196F037300016BAB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CCE5BD42196F037300016BAB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Weak</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CCE5BD44196F038400016BAB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreText.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreText.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>CCE5BD45196F038400016BAB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CCE5BD44196F038400016BAB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CCE5BD46196F03BB00016BAB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>path</key>
+			<string>GoogleCast.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CCE5BD48196F0AC000016BAB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CCE5BD46196F03BB00016BAB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DAE995E32ED8CEA34EC1B03F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Cast Audio Tests/Pods-Cast Audio Tests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>DD1D1102AB983A52F62D3940</key>
+		<dict>
+			<key>fileRef</key>
+			<string>482F9F8064BDDCA988B39B0F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DF2C8F5A1AD45FEB00561DDD</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>496D46FC182DBE9100343F72</string>
+				<string>496D46FD182DBE9100343F72</string>
+				<string>EFD8A0E71AABD052005808B2</string>
+				<string>EFD8A0E81AABD052005808B2</string>
+				<string>496D46FF182DBE9C00343F72</string>
+				<string>496D4700182DBE9C00343F72</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DF2C8F5B1AD58A6D00561DDD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MediaScroller.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DF2C8F5C1AD58A6D00561DDD</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MediaScroller.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DF2C8F5D1AD58A6D00561DDD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DF2C8F5C1AD58A6D00561DDD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DFD2CCE91AD81A5200D2EA6D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DFD2CCF21AD81A5200D2EA6D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DFD2CCEA1AD81A5200D2EA6D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DD1D1102AB983A52F62D3940</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DFD2CCEB1AD81A5200D2EA6D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DFD2CCEC1AD81A5200D2EA6D</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>DFD2CCF71AD81A5200D2EA6D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>8268AB1D90CD19FD7F13733B</string>
+				<string>DFD2CCE91AD81A5200D2EA6D</string>
+				<string>DFD2CCEA1AD81A5200D2EA6D</string>
+				<string>DFD2CCEB1AD81A5200D2EA6D</string>
+				<string>DAE995E32ED8CEA34EC1B03F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>DFD2CCF41AD81A5200D2EA6D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Cast Audio Tests</string>
+			<key>productName</key>
+			<string>Cast Audio Tests</string>
+			<key>productReference</key>
+			<string>DFD2CCED1AD81A5200D2EA6D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>DFD2CCED1AD81A5200D2EA6D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Cast Audio Tests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>DFD2CCEE1AD81A5200D2EA6D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DFD2CCF11AD81A5200D2EA6D</string>
+				<string>DFD2CCEF1AD81A5200D2EA6D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Cast Audio Tests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DFD2CCEF1AD81A5200D2EA6D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DFD2CCF01AD81A5200D2EA6D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DFD2CCF01AD81A5200D2EA6D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DFD2CCF11AD81A5200D2EA6D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Cast_Audio_Tests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DFD2CCF21AD81A5200D2EA6D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DFD2CCF11AD81A5200D2EA6D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DFD2CCF31AD81A5200D2EA6D</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>284CBD7A182ADC2D007F65F9</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>284CBD81182ADC2D007F65F9</string>
+			<key>remoteInfo</key>
+			<string>Cast Audio</string>
+		</dict>
+		<key>DFD2CCF41AD81A5200D2EA6D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>284CBD81182ADC2D007F65F9</string>
+			<key>targetProxy</key>
+			<string>DFD2CCF31AD81A5200D2EA6D</string>
+		</dict>
+		<key>DFD2CCF51AD81A5200D2EA6D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>06FFE6F5DFEF50FFDBB38A59</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Cast Audio Tests/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Cast Audio.app/Cast Audio</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>DFD2CCF61AD81A5200D2EA6D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0605A3C4DAE0D4B5AD561855</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Cast Audio Tests/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Cast Audio.app/Cast Audio</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>DFD2CCF71AD81A5200D2EA6D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>DFD2CCF51AD81A5200D2EA6D</string>
+				<string>DFD2CCF61AD81A5200D2EA6D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>EF60AA251A9D27390036D4FA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>124377CE187CC2B500ADF736</string>
+				<string>124377CF187CC2B500ADF736</string>
+				<string>284CC030182B1891007F65F9</string>
+				<string>284CC031182B1891007F65F9</string>
+				<string>EF60AA261A9D28A40036D4FA</string>
+				<string>EF60AA271A9D28A40036D4FA</string>
+				<string>EFD8A0F11AAE8EE3005808B2</string>
+				<string>EFD8A0F21AAE8EE3005808B2</string>
+				<string>284CC033182C3396007F65F9</string>
+				<string>284CC034182C3396007F65F9</string>
+				<string>EFD8A0EC1AACFCAF005808B2</string>
+				<string>DF2C8F5B1AD58A6D00561DDD</string>
+				<string>DF2C8F5C1AD58A6D00561DDD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CastComponents</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF60AA261A9D28A40036D4FA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CastIconButton.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF60AA271A9D28A40036D4FA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>CastIconButton.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF60AA281A9D28A40036D4FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EF60AA271A9D28A40036D4FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EF6E4DDF1AB25883006A5ACC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>name</key>
+			<string>CastFrameworkAssets.xcassets</string>
+			<key>path</key>
+			<string>../CastFrameworkAssets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF6E4DE01AB25883006A5ACC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EF6E4DDF1AB25883006A5ACC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EF775C5B1A49FE9E00995266</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>thumb.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF775C5C1A49FE9E00995266</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>thumb@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF775C5D1A49FE9E00995266</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>thumb@3x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF775C5E1A49FE9E00995266</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EF775C5B1A49FE9E00995266</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EF775C5F1A49FE9E00995266</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EF775C5C1A49FE9E00995266</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EF775C601A49FE9E00995266</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EF775C5D1A49FE9E00995266</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EFD8A0E71AABD052005808B2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MediaTrack.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFD8A0E81AABD052005808B2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MediaTrack.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFD8A0E91AABD052005808B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EFD8A0E81AABD052005808B2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EFD8A0EA1AABD632005808B2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFD8A0EB1AABD632005808B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EFD8A0EA1AABD632005808B2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EFD8A0EC1AACFCAF005808B2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>CastComponents.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFD8A0ED1AACFCAF005808B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EFD8A0EC1AACFCAF005808B2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EFD8A0EE1AAE32AB005808B2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>GCKMediaInformation+LocalMedia.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFD8A0EF1AAE32AB005808B2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>GCKMediaInformation+LocalMedia.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFD8A0F01AAE32AB005808B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EFD8A0EF1AAE32AB005808B2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EFD8A0F11AAE8EE3005808B2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CastMiniController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFD8A0F21AAE8EE3005808B2</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>CastMiniController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EFD8A0F31AAE8EE3005808B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EFD8A0F21AAE8EE3005808B2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EFE3184719C7D97B00C053EE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>SystemConfiguration.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/SystemConfiguration.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>EFE3184819C7D97B00C053EE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EFE3184719C7D97B00C053EE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>284CBD7A182ADC2D007F65F9</string>
+</dict>
+</plist>
