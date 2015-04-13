@@ -21,4 +21,4 @@ security import ./scripts/cert/UnityDec2.p12 -k ~/Library/Keychains/ios-build.ke
 
 # Put the provisioning profile in place
 mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-cp "./scripts/profile/$PROFILE_NAME.mobileprovision" ~/Library/MobileDevice/Provisioning\ Profiles/
+cp "./scripts/profile/$PROFILE_NAME" ~/Library/MobileDevice/Provisioning\ Profiles/
