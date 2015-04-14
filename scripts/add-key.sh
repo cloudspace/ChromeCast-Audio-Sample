@@ -16,7 +16,7 @@ security set-keychain-settings -t 3600 -l ~/Library/Keychains/ios-build.keychain
 # Add certificates to keychain and allow codesign to access them
 security import ./scripts/cert/apple.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
 security import ./scripts/cert/UnityDec2.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
-security import ./scripts/cert/UnityDec2.p12 -k ~/Library/Keychains/ios-build.keychain -P $KEY_PASSWORD -T /usr/bin/codesign
+security import ./scripts/cert/UnityDec2.p12 -k ~/Library/Keychains/ios-build.keychain -P $ENCRYPTION_SECRET -T /usr/bin/codesign
 
 
 # Put the provisioning profile in place
