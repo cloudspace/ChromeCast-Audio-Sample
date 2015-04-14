@@ -19,9 +19,10 @@ before_script:
   -a -out scripts/cert/UnityDec2.p12
 - "./scripts/add-key.sh"
 script:
+  #-parallelize
 - xctool -workspace "Cast Audio.xcworkspace" -scheme CastAudio -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-- xctool test -workspace "Cast Audio.xcworkspace" -scheme CastAudio -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-- xctool -workspace "Cast Audio.xcworkspace" -scheme CastAudio -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO 'CODE_SIGN_RESOURCE_RULES_PATH=$(SDKROOT)/ResourceRules.plist'
+- xctool test -workspace "Cast Audio.xcworkspace" -scheme CastAudio -parallelize -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xctool -workspace "Cast Audio.xcworkspace" -scheme CastAudioNoTest -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build 'CODE_SIGN_RESOURCE_RULES_PATH=$(SDKROOT)/ResourceRules.plist'
 after_success:
 #- "./scripts/increment-build-number.sh"
 - "./scripts/sign-and-upload.sh"
